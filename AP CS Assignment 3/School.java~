@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import Assignment3.Student;
+
+public class School
+{
+  private ArrayList<Student> students;
+  private ArrayList<Teacher> teachers;
+  
+  School(ArrayList <Student> pupils, ArrayList <Teachers> staff)
+  {
+    students = pupils;
+    teachers = staff;
+  }
+}
