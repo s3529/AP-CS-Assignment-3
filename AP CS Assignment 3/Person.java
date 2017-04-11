@@ -5,13 +5,13 @@ public class Person
   
   Person(String fName, String lName)
   {
-    fName = firstName;
-    lName = lastName;
+    firstName = fName;
+    lastName = lName;
   }
   
   public String toString()
   {
-    String answer = (firstName + " " + lastName);
+    String answer = (firstName + " " + lastName + "\n");
     return answer;
   }
 }

@@ -11,7 +11,7 @@ public class Teacher extends Person
   public String toString()
   {
     String answer = super.toString();
-    answer += ("   Subject: " + subject);
+    answer += ("   Subject: " + subject + "\n");
     return answer;
   }
 }

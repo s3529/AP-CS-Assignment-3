@@ -5,20 +5,20 @@ public class HighSchoolStudent extends Student
   HighSchoolStudent(String fName, String lName, int gLevel, double grade)
   {
     super(fName, lName, gLevel);
-    if(gpa >= 0 && gpa <= 5.0)
+    if(gpa > 0 && gpa < 5.0)
     {
       gpa = grade;
     }
     else
     {
-      gpa = 0.0;
+      gpa = 0;
     }
   }
   
   public String toString()
   {
     String answer = super.toString();
-    answer += ( "   GPA: " + gpa);
+    answer += ("   GPA: " + gpa + "\n");
     return answer;
   }
 }

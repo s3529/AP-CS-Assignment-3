@@ -1,12 +1,13 @@
 public class Student extends Person
 {
-  private int studentId = 0;
+  private int studentId;
+  private static int num = 0;
   private int level;
   
   Student(String fName, String lName, int gLevel)
   {
     super(fName, lName);
-    if(gLevel >= 0 && gLevel <= 12)
+    if(gLevel >= 1 && gLevel <= 12)
     {
       level = gLevel;
     }
@@ -14,7 +15,8 @@ public class Student extends Person
     {
       level = 0;
     }
-    studentId++;
+    num++;
+    studentId = num;
   }
   
   public int getLevel()
@@ -26,8 +28,7 @@ public class Student extends Person
   
   public String toString()
   {
-    String answer = super.toString();
-    answer += ("\n   Grade Level: " + level + "\n   ID: " + studentId);
+    String answer = super.toString() + ("   Grade Level: " + level + "\n   ID: " + studentId + "\n");
     return answer;
   }
 }

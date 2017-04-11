@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class School
 {
-  private ArrayList<Teacher> teachers = new ArrayList<Teacher>();
-  private ArrayList<Student> students = new ArrayList<Student>();
+	private ArrayList<Teacher> teachers = new ArrayList<Teacher>();
+	private ArrayList<Student> students = new ArrayList<Student>();
   
   School(ArrayList <Student> pupils, ArrayList <Teacher> staff)
   {
@@ -26,5 +26,19 @@ public String getGradeLevel(int level)
 	return answer;
 }
 
-public
+public String toString()
+{
+	String answer = "";
+	answer += "Faculty: \n";
+	for(int i = 0; i < teachers.size(); i++)
+	{
+		answer += (teachers.get(i).toString());
+	}
+	answer += "\nStudent Body: \n";
+	for(int i=0; i < students.size(); i++)
+	{
+		answer += (students.get(i).toString());
+	}
+	return answer;
+}
 }
